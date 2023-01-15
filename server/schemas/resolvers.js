@@ -64,28 +64,34 @@ const resolvers = {
       return { session: session.id };
     }
   },
-
+  // Mutation to add users
   Mutation: {
     addUser: async (_, args) => {
+      // create a user through mongoose passing args: email, username, password
       const user = await User.create(args);
+      // signing a token using jwt.sign
       const token = signToken(user);
+      // returning an Auth result
       return { token, user };
     },
+    // Mutation to login as a user
     login: async (_, { email, password }) => {
+      // Finds one user who's email matches the posted email
       const user = await User.findOne({ email });
-
+// checks to see if user exists
       if (!user) {
+        // if not throw auth error
         throw new AuthenticationError('No user found with this email address');
       }
-
+//  if user exissts check for corrrect password
       const correctPw = await user.isCorrectPassword(password);
-
+// if password is incoreect throw auth error
       if (!correctPw) {
         throw new AuthenticationError('Incorrect credentials');
       }
-
+// signing a token using jwt.sign
       const token = signToken(user);
-
+// returning an Auth result 
       return { token, user };
     },
     addOrder: async (parent, { products }, context) => {
