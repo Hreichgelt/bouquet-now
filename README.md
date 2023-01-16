@@ -1,6 +1,6 @@
 # Bouquet Now
 
-[LIVE SITE](https://bouquetnow.herokuapp.com/)
+[SITE DEMO](https://drive.google.com/file/d/1ZKyz9qs-VBQnIzF-n7LyaO56sd5MXVOg/view?usp=sharing)
 
 [REPOSITORY](https://github.com/ntraugh/flower-shop)
 
@@ -44,6 +44,6 @@ Mary Cancellieri | Lacy Nunally | Hans Reichgelt | NateTraugh
 
 ## RESOURCES
 
-1. [LIVE SITE](https://bouquetnow.herokuapp.com/)
+1. [SITE DEMO](https://drive.google.com/file/d/1ZKyz9qs-VBQnIzF-n7LyaO56sd5MXVOg/view?usp=sharing)
 
 2. [REPOSITORY](https://github.com/ntraugh/flower-shop)
